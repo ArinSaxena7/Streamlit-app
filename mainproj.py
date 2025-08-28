@@ -20,4 +20,4 @@ email = st.text_input("Your Email")
 goal = st.selectbox("Choose your category:", ["Student", "Freelancer", "Blogger", "Content Creator"])
 
 if st.button("🚀 Apply Now"):
-    st.info(f"Padhlo bhenke lodo Collge ka project bann nhi\nraha innse 20000 ke sappne dekh rahe haii chutiyee")
+    st.info(f"Padhle bhenke lode {goal} ke sappne dekra chutiya {name}!")

@@ -20,5 +20,10 @@ email = st.text_input("Your Email")
 networth = st.number_input("Your wannabe future networth")
 goal = st.selectbox("Choose your category:", ["Student", "Freelancer", "Blogger", "Content Creator"])
 
+
 if st.button("🚀 Apply Now"):
-    st.info(f"Padhaai karlee be {name} kuch nhi rakha in chutiyaap me\naise hogi teri networth {networth} itni? 🤬 ")
+    st.markdown(f"""
+    name:{name}
+    email:{email}
+    networth:{networth}
+    goal:{goal}""")

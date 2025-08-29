@@ -20,10 +20,11 @@ NO = "No"
 fill_form = st.radio("Wanna fill the form?", [YES, NO], index=None)
 
 
-if fill_form == YES:
-    st.markdown("### 📝 Fill the form below to get started!")
+if fill_form == NO:
+    st.markdown(("### 👋 Who cares, born gareeb die gareeb 😎"))
 else:
-    st.markdown("### 👋 Who cares, born gareeb die gareeb 😎")
+    st.markdown("### Great Fill your form ASAP!")
+    st.markdown("### 🤝 We are here to help you!😎")
     
     name = st.text_input("Your Name")
     email = st.text_input("Your Email")
@@ -42,5 +43,3 @@ else:
             **Category:** {goal}  
             """)
             
-    else:
-     st.markdown("### 👋 Who cares, born gareeb die gareeb 😎")

@@ -44,5 +44,8 @@ elif fill_form == YES:
             **Category:** {goal}  
             """)
 
+st.markdown("### 🚀 Are you ready to earn?\nlets move ahead 🚀")
+if st.radio("Are you ready to earn?", [CHOOSE,YES, NO], index=0):
+    st.markdown("### 👋 Let's get started!")
 else:
     st.info("👆 Please select Yes or No to continue.")

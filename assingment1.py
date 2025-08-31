@@ -1,6 +1,6 @@
 import streamlit as st
 
-# Use online BMW logo for cloud deployment
+# Use an online BMW logo (works on Streamlit Cloud)
 st.image("https://upload.wikimedia.org/wikipedia/commons/4/44/BMW.svg", width=150)
 
 st.title("BMW AUTOMIBILES")
@@ -9,12 +9,12 @@ st.subheader("")
 st.header("""Apply coupon code '[Arin6977]' 
           Get upto 2,00,000 off on your first BMW""")
 
-# Initialize session_state
+# Initialize session state
 if "started" not in st.session_state:
     st.session_state.started = False
 if "car" not in st.session_state:
     st.session_state.car = None
-    
+
 # Buy button
 if st.button("Buy your BMW now!"):
     st.session_state.started = True
@@ -38,30 +38,27 @@ if st.session_state.started:
     with col2:
         if st.button("BMW 5 Series"):
             st.session_state.car = "BMW 5 Series"
-        if st.button("BMW 6 Series"): 
+        if st.button("BMW 6 Series"):
             st.session_state.car = "BMW 6 Series"
         if st.button("BMW 7 Series"):
             st.session_state.car = "BMW 7 Series"
         if st.button("BMW 8 Series"):
             st.session_state.car = "BMW 8 Series"
-    with col3: 
+    with col3:
         if st.button("BMW X1"):
-            st.session_state.car = "BMW X1" 
-        if st.button("BMW X3"): 
+            st.session_state.car = "BMW X1"
+        if st.button("BMW X3"):
             st.session_state.car = "BMW X3"
         if st.button("BMW X5"):
-            st.session_state.car = "BMW X5" 
+            st.session_state.car = "BMW X5"
         if st.button("BMW X7"):
             st.session_state.car = "BMW X7"
-            
-    # Display chosen car 
-    if st.session_state.car: 
+    
+    # Display selected car
+    if st.session_state.car:
         st.success(f"🔥 You selected {st.session_state.car}!")
-        st.write("✅ Thank you for your selection!") 
-        st.write("👉 Let's move forward...") 
-        
-        # Real link button
+        st.write("✅ Thank you for your selection!")
+        st.write("👉 Let's move forward...")
         st.link_button("Tap here to visit the BMW website 🌐", "https://www.bmw.in/en/index.html")
-     
-else: 
+else:
     st.write("👆 Press the button above to start your BMW journey!")

@@ -1,7 +1,7 @@
 import streamlit as st
 
-# Cloud-ready BMW logo (works anywhere)
-st.image("https://upload.wikimedia.org/wikipedia/commons/4/44/BMW.svg", width=150)
+# Load the BMW logo from the repo
+st.image("bmw_logo_PNG19699.png", width=150)  # make sure the filename matches exactly
 
 st.title("BMW AUTOMIBILES")
 st.subheader("The Ultimate Driving Machine")
@@ -43,22 +43,4 @@ if st.session_state.started:
         if st.button("BMW 7 Series"):
             st.session_state.car = "BMW 7 Series"
         if st.button("BMW 8 Series"):
-            st.session_state.car = "BMW 8 Series"
-    with col3:
-        if st.button("BMW X1"):
-            st.session_state.car = "BMW X1"
-        if st.button("BMW X3"):
-            st.session_state.car = "BMW X3"
-        if st.button("BMW X5"):
-            st.session_state.car = "BMW X5"
-        if st.button("BMW X7"):
-            st.session_state.car = "BMW X7"
-    
-    # Display selected car
-    if st.session_state.car:
-        st.success(f"🔥 You selected {st.session_state.car}!")
-        st.write("✅ Thank you for your selection!")
-        st.write("👉 Let's move forward...")
-        st.link_button("Tap here to visit the BMW website 🌐", "https://www.bmw.in/en/index.html")
-else:
-    st.write("👆 Press the button above to start your BMW journey!")
+            st.session_state.car_

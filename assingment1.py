@@ -73,4 +73,4 @@ st.write("""
 """)
 # Footer section
 st.markdown("---")
-st.write("© 2023 Arin Saxena. All rights reserved. Made with ❤️ in Bhopal.")
+st.write("© 2025 Arin Saxena. All rights reserved. Made with ❤️ in Bhopal.")

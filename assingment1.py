@@ -1,6 +1,6 @@
 import streamlit as st
 
-# Use an online BMW logo (works on Streamlit Cloud)
+# Cloud-ready BMW logo (works anywhere)
 st.image("https://upload.wikimedia.org/wikipedia/commons/4/44/BMW.svg", width=150)
 
 st.title("BMW AUTOMIBILES")

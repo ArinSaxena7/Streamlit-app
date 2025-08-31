@@ -1,30 +1,29 @@
 import streamlit as st
 
-# Add BMW logo (online image link or local file)
+# Use online BMW logo for cloud deployment
 st.image("https://upload.wikimedia.org/wikipedia/commons/4/44/BMW.svg", width=150)
 
 st.title("BMW AUTOMIBILES")
 st.subheader("The Ultimate Driving Machine")
 st.subheader("")
-st.header("""Apply cupon code '[Arin6977]' 
+st.header("""Apply coupon code '[Arin6977]' 
           Get upto 2,00,000 off on your first BMW""")
 
- 
-# initialize session_state
+# Initialize session_state
 if "started" not in st.session_state:
     st.session_state.started = False
 if "car" not in st.session_state:
     st.session_state.car = None
     
-# buy button
-if st.button("Buy your BMW now! "):  # keeping your original text
+# Buy button
+if st.button("Buy your BMW now!"):
     st.session_state.started = True
 
 if st.session_state.started:
     st.header("You prove you are a REAL MAN!")
     st.write("Select your BMW")
     
-    # layout grids for cars
+    # Layout grids for cars
     col1, col2, col3 = st.columns(3)
     
     with col1:
@@ -55,14 +54,14 @@ if st.session_state.started:
         if st.button("BMW X7"):
             st.session_state.car = "BMW X7"
             
-    # display chosen car 
+    # Display chosen car 
     if st.session_state.car: 
-         st.success(f"🔥 You selected {st.session_state.car}!")
-         st.write("✅ Thank you for your selection!") 
-         st.write("👉 Let's move forward...") 
-         
-         # real link button
-         st.link_button("Tap here to visit the BMW website 🌐", "https://www.bmw.in/en/index.html")
+        st.success(f"🔥 You selected {st.session_state.car}!")
+        st.write("✅ Thank you for your selection!") 
+        st.write("👉 Let's move forward...") 
+        
+        # Real link button
+        st.link_button("Tap here to visit the BMW website 🌐", "https://www.bmw.in/en/index.html")
      
 else: 
     st.write("👆 Press the button above to start your BMW journey!")
